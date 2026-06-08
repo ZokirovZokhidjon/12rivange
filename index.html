@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>12: Инсон Қасоси | Триллер Хизмати</title>
+    <style>
+        /* Юқорида мен берган барча CSS кодларни 
+           айни шу ерга, ўзгартиришсиз ташлайсиз */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* ... қолган кодлар ... */
+
+        :root {
+            --bg-color: #0c0d10;
+            --card-bg: #14161d;
+            --accent-color: #8b0000; /* Тўқ қизил - қон ва қасос рамзи */
+            --text-color: #e0e0e0;
+            --text-muted: #8a8f98;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(12,13,16,1) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            color: #fff;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-story {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .about-story h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .episode-card {
+            background-color: var(--card-bg);
+            border: 1px solid #1f232e;
+            border-radius: 6px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .episode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.2);
+        }
+
+        .episode-card:hover::before {
+            background-color: var(--accent-color);
+        }
+
+        .episode-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .audio-player {
+            margin-top: 40px;
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px dashed var(--accent-color);
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 15px;
+        }
+.logo img{
+    width: 250px;
+    height: 300px;
+    border-radius: 25px;
+    border-color: gold;
+    border-style: solid;
+    box-shadow: 3px 5px 8px;
+    margin: 25px;
+}
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #1f232e;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>12: ИНСОН ҚАСОСИ</h1>
+        <p>Дублиндан бошланган совуқ излар ва поезддаги сўнгги ҳукм...</p>
+        <div class="logo">
+        <img src="logo.jpg" alt="log">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="about-story">
+            <h2>Лойиҳа ҳақида</h2>
+            
+            <p>Бу шунчаки қасос тарихи эмас. Бу — қонун ожиз қолган жойда, ўз фарзандларининг ҳаёти ва номуси учун бирлашган 12 нафар ота-онанинг тизимга, адолатсизликка ва болаликдаги руҳий жароҳатлари ортига яширинган совуққон британиялик амалдорга қарши чиқарган ҳукмидир. Воқеалар Дублиннинг энг сирли бурчакларидан бошланиб, ҳаракатдаги ёпиқ поезд ичида ўз ечимини топади.</p>
+        </div>
+
+        <div class="audio-player">
+            <h3>Асарнинг Расмий Саундтреки (AI Generated)</h3>
+            <p>Ҳикоя муҳитига шўнғиш учун махсус оркестр мусиқаси</p>
+            <audio controls>
+                <source src="Myheard history (5).mp3" type="audio/mpeg">
+                Браузерингиз аудио элементни қўллаб-қувватламайди.
+            </audio>
+        </div>
+
+        <h2 style="margin-top: 60px; border-bottom: 1px solid var(--accent-color); padding-bottom: 10px;">Хикоя Қисмлари (12 Қисм)</h2>
+        
+        <div class="episodes-grid">
+            <!-- 1-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">01-Қисм</div>
+                <h3>Дублиндаги Ниқоб</h3>
+                <p>Британиялик нуфузли иқтисодчи ва амалдорнинг Дублиндаги ҳаёти ҳамда унинг ортидаги жирканч сирларнинг бошланиши.</p>
+ <a href="page1.html"> 1- ҚИСМ</a>
+            
+            </div>
+            <!-- 2-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">02-Қисм</div>
+                <h3>Ўтмишнинг Қора Сояси</h3>
+                <p>Амалдорнинг болаликдаги руҳий жароҳатлари ва ўз ота-онасига қилган суиқасди тарихи очилади.</p>
+            </div>
+            <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">03-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 4-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">04-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 5-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">05-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">06-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">07-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">08-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">09-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">10-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+               <!-- 3-қисм -->
+            <div class="episode-card">
+                <div class="episode-number">11-Қисм</div>
+                <h3>Шивирлашлар Занжири</h3>
+                <p>Жабрланган 12 нафар гўдакнинг яқинлари қонундан умид узиб, яширинча бирлаша бошлайдилар.</p>
+            </div>
+            <!-- Қолган қисмларни шу тарзда давом эттириш мумкин -->
+            <div class="episode-card" style="opacity: 0.5;">
+                <div class="episode-number">12-Қисм</div>
+                <h3>Сўнгги Бекет</h3>
+                <p>Поезддаги шиддатли ечим, адолатнинг қонли тантанаси ва қасоскорларнинг виждон азоби.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026. "12: Инсон Қасоси" — Муаллифлик лойиҳаси. Барча ҳуқуқлар ҳимояланган.</p>
+    </footer>
+
+</body>
+</html>
